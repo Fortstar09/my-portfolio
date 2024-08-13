@@ -9,7 +9,7 @@ const link = [
 
 export function Footer() {
   return (
-    <footer className="px-32 pb-8">
+    <footer className="px-4 sm:px-10 md:px-32 py-4">
       <div className="">
         <h1 className="text-link text-secondary">Mehmet Akif Karasu ⏤ 2020</h1>
       </div>

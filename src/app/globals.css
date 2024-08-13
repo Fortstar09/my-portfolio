@@ -39,4 +39,26 @@
     background: #fafafa;
     opacity: 0.2;
   }
+
+  .big-heading {
+    margin: 0px;
+    font-size: clamp(30px, 8vw, 65px);
+    line-height: 121%;
+  }
+
+  .resume {
+    background-color: transparent;
+    border: 1px solid #2429AF;
+    padding: 1rem 1.25rem;
+    line-height: 1;
+
+    text-decoration: none;
+    transition: cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .resume:hover {
+    outline: none;
+    box-shadow: 4px 4px 0 0 #2429AF;
+    transform: translate(-5px, -5px);
+  }
 }
