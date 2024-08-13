@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 const navLinks = [
-  { src: "#", name: "about", id: 2 },
-  { src: "#", name: "projects", id: 3 },
+  { src: "#", name: "about", id: 1 },
+  { src: "#", name: "projects", id: 2 },
+  { src: "#", name: "contact", id: 3 },
   { src: "#", name: "resume", id: 4 },
-  { src: "#", name: "contact", id: 5 },
 ];
 
 export default function Navbar() {
