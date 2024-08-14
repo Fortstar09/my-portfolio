@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const navLinks = [
-  { src: "#", name: "about", id: 1 },
+  { src: "#about", name: "about", id: 1 },
   { src: "#", name: "projects", id: 2 },
   { src: "#", name: "contact", id: 3 },
   { src: "#", name: "resume", id: 4 },
@@ -10,7 +10,7 @@ const navLinks = [
 export default function Navbar() {
   return (
     <>
-      <nav className="w-full flex justify-between items-center px-4 sm:px-10 md:px-32 pt-8">
+      <nav className="w-full flex justify-between items-center border-b border-lightgrey px-4 sm:px-10 md:px-32 py-4 ">
         <div className="flex justify-between items-center">
           <h1 className="text-h2 text-mainblack font-black">om.</h1>
         </div>
