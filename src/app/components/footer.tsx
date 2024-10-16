@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const link = [
+const links = [
   { src: "https://github.com/Fortstar09", name: "Github", id: 1 },
   {
     src: "https://www.linkedin.com/in/ogunya-fortunate/",
@@ -15,16 +15,16 @@ const link = [
   },
 ];
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="px-6 sm:px-10 md:px-32 py-4">
       <div className="">
-        <h1 className="text-link text-secondary">Mehmet Akif Karasu ⏤ 2020</h1>
+        <h1 className="md:text-link text-sm text-secondary">Fortunate</h1>
       </div>
       <ul className="flex justify-between item-center">
-        {link.map((link) => (
+        {links.map((link) => (
           <Link target="_blank" key={link.id} href={link.src}>
-            <li className="text-subText text-maingrey px-3 hover:text-secondary hover:underline hover:underline-offset-2">
+            <li className="text-sm md:text-subText text-maingrey px-1 md:px-3 hover:text-secondary hover:underline hover:underline-offset-2">
               {link.name}
             </li>
           </Link>

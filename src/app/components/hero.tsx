@@ -1,11 +1,14 @@
 "use client";
-import Link from "next/link";
+// import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
+import Button from "./ui/button";
+import { cn } from "@/lib/utils";
+import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 
 const transition = { duration: 1, ease: [0.25, 0.1, 0.25, 1] };
 const variants = {
-  hidden: { filter: "blur(10px)", transform: "translateY(20%)", opacity: 0 },
+  hidden: { filter: "blur(20px)", transform: "translateY(20%)", opacity: 0 },
   visible: { filter: "blur(0)", transform: "translateY(0)", opacity: 1 },
 };
 
@@ -22,7 +25,7 @@ export default function Hero() {
         initial="hidden"
         whileInView="visible"
         transition={{ staggerChildren: 0.04 }}
-        className="w-full flex flex-col justify-between items-start px-6 sm:px-10 md:px-32 py-20"
+        className=" relative w-full flex flex-col justify-between items-start px-6 sm:px-10 md:px-32 py-28"
       >
         <motion.h2
           transition={transition}
@@ -62,25 +65,31 @@ export default function Hero() {
         <motion.p
           transition={transition}
           variants={variants}
-          className="text-subText font-light text-maingrey mt-6 leading-normal max-w-lg"
+          className="text-subText font-light text-maingrey mt-6 leading-normal max-w-sm"
         >
           {`I'm a software engineer devoted to crafting and designing exceptional
-          digital experiences. With a strong passion for building sleek,
-          responsive websites that delight users, I'm currently focused on
-          creating accessible solutions and tackling real-world challenges
-          through my projects. `}
+          digital experiences. `}
           <span className="text-secondary font-normal">
             {`Let's team up and make something extraordinary!`}
           </span>
         </motion.p>
-        <motion.a
+        <motion.div
           transition={transition}
           variants={variants}
-          href="#"
-          className="mt-12 text-secondary resume text- rounded-md"
+          className="mt-10"
         >
-          Check out my resume!
-        </motion.a>
+          <Button title="Check out my resume" href="#" color="green-500" />
+        </motion.div>{" "}
+        <AnimatedGridPattern
+          numSquares={30}
+          maxOpacity={0.1}
+          duration={3}
+          repeatDelay={1}
+          className={cn(
+            "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+            "inset-x-0 inset-y-[10%] h-[100%] skew-y-12"
+          )}
+        />
       </motion.div>
     </>
   );

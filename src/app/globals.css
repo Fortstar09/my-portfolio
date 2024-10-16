@@ -4,10 +4,10 @@
 
 
 
-@layer components {
+@layer base {
 
-  body {
-    background-color: F3F3F3;
+  html {
+    scroll-behavior: smooth;
   }
 
   footer {
@@ -48,7 +48,7 @@
 
   .resume {
     background-color: transparent;
-    border: 1px solid #2429AF;
+    border: 1px solid #009a27;
     padding: 1rem 1.25rem;
     line-height: 1;
     text-decoration: none;
@@ -57,14 +57,13 @@
 
   .resume:hover {
     outline: none;
-    box-shadow: 4px 4px 0 0 #2429AF;
+    box-shadow: 4px 4px 0 0 #009a27;
     transform: translate(-5px, -5px);
   }
 
   .image {
     filter: grayscale(100%);
     transition: all .5s ease-in-out;
-
   }
 
   .image:hover {
@@ -72,5 +71,93 @@
     filter: none;
     box-shadow: 20px 20px 0 0 #009a272b;
     transform: translate(-5px, -5px);
+  }
+
+  .icon {
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: all .5s ease-in-out;
+  }
+
+  .icon:hover {
+    outline: none;
+    filter: none;
+  }
+
+  .pro {
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: all .5s ease-in-out;
+    box-shadow: 0px 14px 17px 1px rgba(0, 154, 39, 0.15);
+    -webkit-box-shadow: 0px 14px 17px 1px rgba(0, 154, 39, 0.15);
+    -moz-box-shadow: 0px 14px 17px 1px rgba(0, 154, 39, 0.15);
+  }
+
+  .pro:hover {
+    outline: none;
+    filter: none;
+  }
+
+  .element {
+    animation: fadeOut 2s forwards;
+    animation-timing-function: scroll();
+  }
+
+  .project-links svg {
+    width: 15px;
+    color: #009a27;
+  }
+
+  /* section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    scroll-snap-align: center;
+    perspective: 500px;
+  }
+
+  section>div {
+    width: 300px;
+    height: 500px;
+    position: relative;
+    max-height: 90vh;
+    margin: 20px;
+    background: var(--white);
+    overflow: hidden;
+  } */
+
+  .port {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .progress {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--accent);
+    bottom: 100px;
+  }
+
+
+  @keyframes fadeOut {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  :root {
+    --radius: 0.5rem;
   }
 }
