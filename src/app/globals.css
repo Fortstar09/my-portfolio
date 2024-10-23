@@ -55,6 +55,10 @@
     transition: all .3s ease-in-out;
   }
 
+  .scrollbar {
+    scrollbar-width: none;
+  }
+
   .resume:hover {
     outline: none;
     box-shadow: 4px 4px 0 0 #009a27;
@@ -99,6 +103,8 @@
   }
 
   .element {
+    width: 100%;
+    /* height: 100vh; */
     animation: fadeOut 2s forwards;
     animation-timing-function: scroll();
   }
@@ -106,6 +112,10 @@
   .project-links svg {
     width: 15px;
     color: #009a27;
+  }
+
+  .textShadow {
+    text-shadow: 1px 1px 20px #fff;
   }
 
   /* section {

@@ -2,15 +2,16 @@ import Link from "next/link";
 
 const navLinks = [
   { src: "#about", name: "About", id: 1 },
-  { src: "#project", name: "Projects", id: 2 },
-  { src: "#", name: "Contact", id: 3 },
+  { src: "#tech", name: "Techs", id: 2 },
+  { src: "#project", name: "Projects", id: 3 },
+  { src: "#", name: "Contact", id: 4 },
   // { src: "#", name: "Resume", id: 4 },
 ];
 
 export default function Navbar() {
   return (
     <>
-      <nav className="w-full flex justify-between items-center border-b border-lightgrey px-4 sm:px-10 md:px-32 py-4 ">
+      <nav className="w-full flex justify-between items-center border-b border-lightgrey px-4 sm:px-10 md:px-32 py-1 ">
         <div className="flex justify-between items-center">
           <h1 className="text-h2 text-mainblack font-black">om.</h1>
         </div>
@@ -34,7 +35,7 @@ export default function Navbar() {
         <ul className=" justify-between item-center hidden sm:flex">
           {navLinks.map((link) => (
             <Link key={link.id} href={link.src}>
-              <li className="text-link text-maingrey px-3 hover:text-secondary hover:underline hover:underline-offset-2">
+              <li className="text-subText text-maingrey px-3 hover:text-secondary hover:underline hover:underline-offset-2">
                 {link.name}
               </li>
             </Link>

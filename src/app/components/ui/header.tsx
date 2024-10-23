@@ -12,7 +12,7 @@ const Header = ({ id, title }: HeaderProps) => {
         <span className="text-sm text-secondary font-normal mr-3">0{id}.</span>
         {title}
         <span
-          className="mx-3 sm:inline-block w-56 opacity-25 bg-maingrey"
+          className="mx-3 sm:inline-block w-60 opacity-25 bg-gradient-to-r from-maingrey to-transparent"
           style={{ height: "1px" }}
         ></span>
       </h2>

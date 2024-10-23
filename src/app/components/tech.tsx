@@ -26,13 +26,14 @@ const slugs = [
   "jira",
   "gitlab",
   "figma",
+  "livewire",
 ];
 
 export function IconCloudDemo() {
   return (
-    <Section>
+    <Section id="tech">
       <Header id={2} title="Tools & Technologies" />
-      <div className=" flex flex-col md:flex-row items-center gap-24 justify-center">
+      <div className=" flex flex-col lg:flex-row items-center gap-24 lg:gap-[20rem] justify-center">
         <IconCloud iconSlugs={slugs} />
         <div>
           <Technologies />
@@ -44,7 +45,7 @@ export function IconCloudDemo() {
 
 export function Technologies() {
   return (
-    <div className="flex flex-col items-start gap-20 justify-center">
+    <div className="flex flex-col md:flex-row lg:flex-col items-start gap-20 justify-center">
       <div>
         <h3 className=" text-maingrey text-nav font-bold">Tech Stack</h3>
         <ul className="flex gap-12">
@@ -57,7 +58,7 @@ export function Technologies() {
               <span className="text-secondary text-nav">▹</span>TypeScript
             </li>
             <li className="my-1  text-subText">
-              <span className="text-secondary text-nav">▹</span>React{" "}
+              <span className="text-secondary text-nav">▹</span>React
             </li>
           </div>
           <div>

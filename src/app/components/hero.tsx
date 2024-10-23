@@ -30,11 +30,11 @@ export default function Hero() {
         <motion.h2
           transition={transition}
           variants={variants}
-          className="ml-1 mb-4 text-secondary"
+          className="ml-1 mb-4 z-10 text-secondary"
         >
           Hi, my name is
         </motion.h2>
-        <h2 className="big-heading font-bold text-mainblack mb-2">
+        <h2 className="big-heading font-bold text-mainblack mb-2 textShadow z-10">
           {nameWords.map((word, index) => (
             <React.Fragment key={index}>
               <motion.span
@@ -48,7 +48,7 @@ export default function Hero() {
             </React.Fragment>
           ))}
         </h2>
-        <h2 className="big-heading font-bold text-maingrey">
+        <h2 className="big-heading font-bold z-10 text-maingrey  textShadow">
           {workWords.map((word, index) => (
             <React.Fragment key={index}>
               <motion.span
@@ -65,7 +65,7 @@ export default function Hero() {
         <motion.p
           transition={transition}
           variants={variants}
-          className="text-subText font-light text-maingrey mt-6 leading-normal max-w-sm"
+          className="text-subText  font-light text-maingrey mt-6 z-10 leading-normal max-w-sm"
         >
           {`I'm a software engineer devoted to crafting and designing exceptional
           digital experiences. `}
@@ -76,10 +76,10 @@ export default function Hero() {
         <motion.div
           transition={transition}
           variants={variants}
-          className="mt-10"
+          className="mt-10 z-10"
         >
           <Button title="Check out my resume" href="#" color="green-500" />
-        </motion.div>{" "}
+        </motion.div>
         <AnimatedGridPattern
           numSquares={30}
           maxOpacity={0.1}
@@ -87,7 +87,7 @@ export default function Hero() {
           repeatDelay={1}
           className={cn(
             "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
-            "inset-x-0 inset-y-[10%] h-[100%] skew-y-12"
+            "inset-x-0 inset-y-[10%] h-[70%] md:h-[100%] skew-y-12 z-0 opacity-25 md:opacity-75"
           )}
         />
       </motion.div>

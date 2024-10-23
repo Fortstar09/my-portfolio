@@ -1,4 +1,3 @@
-// import Image from "next/image";
 import "@radix-ui/themes/styles.css";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
@@ -15,7 +14,7 @@ export default function Home() {
       <Hero />
       <About />
       <IconCloudDemo />
-      {/* <Project /> */}
+      <Project />
       <Footer />
     </Theme>
   );

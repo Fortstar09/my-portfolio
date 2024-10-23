@@ -18,13 +18,14 @@ export const cloudProps: Omit<ICloud, "children"> = {
       alignItems: "center",
       width: "100%",
       paddingTop: 40,
+      cursor: "pointer",
     },
   },
   options: {
     reverse: true,
     depth: 1,
     wheelZoom: false,
-    imageScale: 2,
+    imageScale: 3,
     activeCursor: "default",
     tooltip: "native",
     initial: [0.1, -0.1],
@@ -33,7 +34,7 @@ export const cloudProps: Omit<ICloud, "children"> = {
     outlineColour: "#0000",
     maxSpeed: 0.01,
     minSpeed: 0.01,
-    // dragControl: false,
+    dragControl: false,
   },
 };
 
@@ -47,7 +48,7 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
     bgHex,
     fallbackHex,
     minContrastRatio,
-    size: 35,
+    size: 20,
     aProps: {
       href: undefined,
       target: undefined,

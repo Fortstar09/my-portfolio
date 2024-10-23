@@ -1,47 +1,58 @@
-"use client";
+import Section from "./ui/section";
+import Header from "./ui/header";
+import { ProjectCard } from "./projectCard";
 
-import Link from "next/link";
-import ProjectCard from "./projectCard";
-import { motion, Variants } from "framer-motion";
-
-const cardVariants: Variants = {
-  offscreen: {
-    y: 300,
+const Projects = [
+  {
+    src: "https://fort-ground.netlify.app/",
+    name: "Halcyon Theme",
+    description: `A web app for visualizing personalized Spotify data. View your top
+            artists, top tracks, recently played tracks, and detailed audio
+            information about each track. Create and save new playlists of
+            recommended tracks based on your existing playlists and more.`,
+    github: "https://github.com/bchiang7/halcyon-site",
+    externaLink: "https://halcyon-theme.netlify.com/",
+    imageSrc: "5.png",
+    // list: {"VS Code" "Sublime Text", "Atom", "iTerm2"},
+    id: 1,
   },
-  onscreen: {
-    y: 50,
-    rotate: -10,
-    transition: {
-      type: "spring",
-      bounce: 0.4,
-      duration: 0.8,
-    },
+  {
+    src: "https://fort-ground.netlify.app/",
+    name: "Halcyon Theme",
+    description: `A web app for visualizing personalized Spotify data. View your top
+            artists, top tracks, recently played tracks, and detailed audio
+            information about each track. Create and save new playlists of
+            recommended tracks based on your existing playlists and more.`,
+    github: "https://github.com/bchiang7/halcyon-site",
+    externaLink: "https://halcyon-theme.netlify.com/",
+    imageSrc: "5.png",
+    // list: {"VS Code" "Sublime Text", "Atom", "iTerm2"},
+    id: 2,
   },
-};
+  {
+    src: "https://fort-ground.netlify.app/",
+    name: "Halcyon Theme",
+    description: `A web app for visualizing personalized Spotify data. View your top
+            artists, top tracks, recently played tracks, and detailed audio
+            information about each track. Create and save new playlists of
+            recommended tracks based on your existing playlists and more.`,
+    github: "https://github.com/bchiang7/halcyon-site",
+    externaLink: "https://halcyon-theme.netlify.com/",
+    imageSrc: "5.png",
+    // list: {"VS Code" "Sublime Text", "Atom", "iTerm2"},
+    id: 3,
+  },
+];
 
 export default function Project() {
   return (
     <>
-      <motion.div
-        id="project"
-        className="w-full my-40 px-6 sm:px-10 md:px-32 py-12 element bg-mainwhite"
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: true, amount: 0.8 }}
-        // variants={cardVariants}
-      >
-        <h2 className="mb-4 text-maingrey text-nav sm:text-h2 font-bold">
-          <span className="text-sm text-secondary font-normal mr-3">02.</span>
-          Some Things I&apos;ve Built
-          <span
-            className="mx-3 sm:inline-block w-56 opacity-25 bg-maingrey"
-            style={{ height: "1px" }}
-          ></span>
-        </h2>
-        <div className="flex flex-col justify-between item-center">
+      <Section id="project">
+        <Header id={3} title="Projects" />
+        <div className="my-10">
           <ProjectCard />
         </div>
-      </motion.div>
+      </Section>
     </>
   );
 }

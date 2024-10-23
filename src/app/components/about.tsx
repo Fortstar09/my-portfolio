@@ -6,7 +6,7 @@ import Section from "./ui/section";
 export default function About() {
   return (
     <>
-      <Section>
+      <Section id="about">
         <Header id={1} title="About" />
 
         <div className="flex flex-col-reverse md:flex-row justify-between items-start ">
@@ -19,7 +19,7 @@ I'm a seasoned frontend engineer with a focus on building responsive, intuitive 
               </p>
             </div>
             <div className="mt-12">
-              <Button title="Check out my resume" href="#" color="green-500" />
+              <Button title="Check out my resume" href="#" color="secondary" />
             </div>
           </div>
           <div className="sm:w-96">
